@@ -1,0 +1,9 @@
+h1 {
+  margin: 0;
+}
+
+.main-header {
+  background-color: #2f27ce;
+  color: #ffffff;
+  padding: 10px;
+}

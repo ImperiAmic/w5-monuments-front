@@ -1,3 +1,5 @@
+import "./styles.css";
+import "@fontsource-variable/roboto/wdth.css";
 import getApp from "./components/App/getApp";
 
 const rootElement = document.querySelector(".root");
