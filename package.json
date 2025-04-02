@@ -9,7 +9,8 @@
     "build:dev": "tsc && vite build -w",
     "preview": "vite preview",
     "prepare": "husky",
-    "test": "vitest"
+    "test": "vitest",
+    "test:dev": "vitest watch"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
