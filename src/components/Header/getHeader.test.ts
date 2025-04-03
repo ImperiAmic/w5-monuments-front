@@ -10,10 +10,10 @@ describe("Given the getHeader function", () => {
 
       screen.appendChild(Header);
 
-      const headerTitle = screen.querySelector("h1");
+      const appName = screen.querySelector("h1");
 
-      expect(headerTitle).not.toBeNull();
-      expect(headerTitle?.textContent).toBe(expectedTitle);
+      expect(appName).not.toBeNull();
+      expect(appName?.textContent).toBe(expectedTitle);
     });
   });
 });
