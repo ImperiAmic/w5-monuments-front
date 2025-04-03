@@ -22,12 +22,22 @@
   gap: 24px;
 }
 
-.navigation-element {
+.navigation-element,
+.navigation-element--active {
   font-size: 1.5rem;
 
   &:hover {
-    text-decoration: underline;
     font-weight: bold;
     cursor: pointer;
+    border-bottom: 3px solid #fff;
+  }
+}
+
+.navigation-element--active {
+  font-weight: bold;
+  border-bottom: 3px solid #fff;
+
+  &:hover {
+    text-decoration: none;
   }
 }
