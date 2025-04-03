@@ -1,12 +1,22 @@
 import "./Header.css";
 
 const getHeader = (): HTMLElement => {
-  const header = document.createElement("header");
-  header.classList.add("main-header");
+  const Header = document.createElement("header");
+  Header.classList.add("main-header");
 
-  header.innerHTML = "<h1 class='main-title'>Monuments - Backoffice</h1>";
+  Header.innerHTML = `<h1 class='main-title'>Monuments - Backoffice</h1>
+  <nav>
+    <ul class='navigation-elements'>
+      <li class='navigation-element'>
+        <a href='/monuments'>Monuments</a>
+      </li>
+      <li class='navigation-element'>
+        <a href='/add-monument'>Add Monument</a>
+      </li>
+    </ul>
+  </nav>`;
 
-  return header;
+  return Header;
 };
 
 export default getHeader;
