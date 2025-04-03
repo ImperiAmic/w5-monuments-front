@@ -1,8 +1,10 @@
 .main-header {
   background-color: #2f27ce;
   padding: 10px;
+  color: #fff;
 }
 
-.title {
-  color: #fff;
+.main-title {
+  margin: 0 auto;
+  max-width: 1200px;
 }
