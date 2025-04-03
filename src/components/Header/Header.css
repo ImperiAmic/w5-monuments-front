@@ -1,10 +1,28 @@
 .main-header {
   background-color: #2f27ce;
-  padding: 10px;
+  padding: 24px;
   color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-title {
-  margin: 0 auto;
+  margin: 0;
   max-width: 1200px;
+}
+
+.navigation-elements {
+  padding-top: 15px;
+  display: flex;
+  gap: 24px;
+}
+
+.navigation-element {
+  font-size: 1.5rem;
+
+  &:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+  }
 }
