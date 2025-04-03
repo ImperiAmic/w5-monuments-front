@@ -1,3 +1,4 @@
+import "./App.css";
 import getHeader from "../Header/getHeader";
 
 const getApp = (): HTMLElement => {

@@ -10,11 +10,10 @@ describe("Given the getApp function", () => {
 
       screen.appendChild(App);
 
-      const header = screen.querySelector("header");
-      const appTitle = header?.querySelector("h1");
+      const appName = screen.querySelector("h1");
 
-      expect(header).not.toBeNull();
-      expect(appTitle?.textContent).toBe(expectAppTitle);
+      expect(appName).not.toBeNull();
+      expect(appName?.textContent).toBe(expectAppTitle);
     });
   });
 });
