@@ -5,31 +5,31 @@ const getHeader = (): HTMLElement => {
   Header.classList.add("main-header");
 
   Header.innerHTML = `
-  <div class='header-container'>
-    <h1 class='main-title'>Monuments - Backoffice</h1>
-    <nav>
-      <ul class='navigation-elements'>
-        <li>
-          <a class='navigation-element navigation-element--active' href='/monuments'>Monuments</a>
-        </li>
-        <li>
-         <a class='navigation-element' href='/add-monument'>Add Monument</a>
-        </li>
-      </ul>
-    </nav>
-  </div>`;
+    <div class='header-container'>
+      <h1 class='main-title'>Monuments - Backoffice</h1>
+      <nav>
+        <ul class='navigation-elements'>
+          <li>
+            <a class='navigation-element navigation-element--active' href='/'>Monuments</a>
+          </li>
+          <li>
+          <a class='navigation-element' href='/add-monument'>Add Monument</a>
+          </li>
+        </ul>
+      </nav>
+    </div>`;
 
-  const navigationElements = Header.querySelectorAll("a");
+  const links = Header.querySelectorAll("a");
 
-  navigationElements.forEach((navigationElement) => {
-    const userPathLocation = window.location.pathname;
-    const linkElementPath = navigationElement.getAttribute("href");
+  links.forEach((navigationElement) => {
+    const userUrlLocation = window.location.href;
+    const linkElementUrl = navigationElement.href;
 
-    if (userPathLocation === linkElementPath) {
+    if (userUrlLocation === linkElementUrl) {
       navigationElement.classList.add("navigation-element--active");
     }
 
-    if (userPathLocation !== linkElementPath) {
+    if (userUrlLocation !== linkElementUrl) {
       navigationElement.classList.remove("navigation-element--active");
     }
   });
