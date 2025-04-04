@@ -16,14 +16,14 @@
   font-size: 2.5rem;
 }
 
-.navigation-elements {
+.header-navigation {
   padding-top: 24px;
   display: flex;
   gap: 24px;
 }
 
-.navigation-element,
-.navigation-element--active {
+.header-navigation__link,
+.header-navigation__link--active {
   font-size: 1.5rem;
 
   &:hover {
@@ -33,7 +33,7 @@
   }
 }
 
-.navigation-element--active {
+.header-navigation__link--active {
   font-weight: bold;
   border-bottom: 3px solid #fff;
 

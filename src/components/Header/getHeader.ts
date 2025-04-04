@@ -8,12 +8,12 @@ const getHeader = (): HTMLElement => {
     <div class='header-container'>
       <h1 class='main-title'>Monuments - Backoffice</h1>
       <nav>
-        <ul class='navigation-elements'>
+        <ul class='header-navigation'>
           <li>
-            <a class='navigation-element navigation-element--active' href='/'>Monuments</a>
+            <a class='header-navigation__link header-navigation__link--active' href='/'>Monuments</a>
           </li>
           <li>
-          <a class='navigation-element' href='/add-monument'>Add Monument</a>
+          <a class='header-navigation__link' href='/add-monument'>Add Monument</a>
           </li>
         </ul>
       </nav>
@@ -26,11 +26,11 @@ const getHeader = (): HTMLElement => {
     const linkElementUrl = navigationElement.href;
 
     if (userUrlLocation === linkElementUrl) {
-      navigationElement.classList.add("navigation-element--active");
+      navigationElement.classList.add("header-navigation__link--active");
     }
 
     if (userUrlLocation !== linkElementUrl) {
-      navigationElement.classList.remove("navigation-element--active");
+      navigationElement.classList.remove("header-navigation__link--active");
     }
   });
 
