@@ -1,17 +1,21 @@
 import { Monument } from "../../types";
+import getMonumentImage from "./getMonumentImage";
 import "./MonumentCard.css";
 
 const getMonumentCard = (monument: Monument): HTMLElement => {
-  const MonumentCard = document.createElement("article");
-  MonumentCard.className = "monument-card";
+  const monumentCard = document.createElement("article");
+  monumentCard.className = "monument-card";
 
-  const MonumentName = document.createElement("h2");
-  MonumentName.className = "monument-name";
-  MonumentName.textContent = monument.name;
+  const monumentName = document.createElement("h2");
+  monumentName.className = "monument-name";
+  monumentName.textContent = monument.name;
 
-  MonumentCard.appendChild(MonumentName);
+  monumentCard.appendChild(monumentName);
 
-  return MonumentCard;
+  const monumentImage = getMonumentImage(monument);
+  monumentCard.appendChild(monumentImage);
+
+  return monumentCard;
 };
 
 export default getMonumentCard;
