@@ -10,8 +10,8 @@ const getApp = (): HTMLElement => {
   const Header = getHeader();
   mainContainer.appendChild(Header);
 
-  const Monuments = getMonumentsList(monuments);
-  mainContainer.appendChild(Monuments);
+  const MonumentsList = getMonumentsList(monuments);
+  mainContainer.appendChild(MonumentsList);
 
   return mainContainer;
 };

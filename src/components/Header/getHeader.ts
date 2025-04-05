@@ -1,10 +1,10 @@
 import "./Header.css";
 
 const getHeader = (): HTMLElement => {
-  const Header = document.createElement("header");
-  Header.classList.add("main-header");
+  const header = document.createElement("header");
+  header.classList.add("main-header");
 
-  Header.innerHTML = `
+  header.innerHTML = `
     <div class='header-container'>
       <h1 class='main-title'>Monuments - Backoffice</h1>
       <nav>
@@ -19,7 +19,7 @@ const getHeader = (): HTMLElement => {
       </nav>
     </div>`;
 
-  const links = Header.querySelectorAll("a");
+  const links = header.querySelectorAll("a");
 
   links.forEach((navigationElement) => {
     const userUrlLocation = window.location.href;
@@ -34,7 +34,7 @@ const getHeader = (): HTMLElement => {
     }
   });
 
-  return Header;
+  return header;
 };
 
 export default getHeader;
