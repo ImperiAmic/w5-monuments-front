@@ -1,5 +1,5 @@
-import { Monument } from "../../types";
-import getMonumentCard from "./getMonumentCard";
+import { Monument } from "../../../types";
+import getMonumentCard from "../getMonumentCard";
 
 describe("Given the getMonumentCard function", () => {
   describe("When it receives Vilafranca del Penedès' Santa Maria Basilic", () => {

@@ -3,21 +3,21 @@ import getMonumentCard from "../MonumentCard/getMonumentCard";
 import "./MonumentsList.css";
 
 const getMonumentsList = (monuments: Monument[]): HTMLElement => {
-  const MonumentsList = document.createElement("ul");
-  MonumentsList.className = "monuments";
+  const monumentsList = document.createElement("ul");
+  monumentsList.className = "monuments";
 
   monuments.forEach((monument) => {
-    const MonumentWrapper = document.createElement("li");
-    MonumentWrapper.className = "monument-wrapper";
+    const monumentWrapper = document.createElement("li");
+    monumentWrapper.className = "monument-wrapper";
 
     const MonumentCard = getMonumentCard(monument);
 
-    MonumentWrapper.appendChild(MonumentCard);
+    monumentWrapper.appendChild(MonumentCard);
 
-    MonumentsList.appendChild(MonumentWrapper);
+    monumentsList.appendChild(monumentWrapper);
   });
 
-  return MonumentsList;
+  return monumentsList;
 };
 
 export default getMonumentsList;
