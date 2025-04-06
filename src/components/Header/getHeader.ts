@@ -13,7 +13,7 @@ const getHeader = (): HTMLElement => {
             <a class='header-navigation__link header-navigation__link--active' href='/'>Monuments</a>
           </li>
           <li>
-          <a class='header-navigation__link' href='/add-monument'>Add Monument</a>
+          <a class='header-navigation__link' href='/add/'>Add Monument</a>
           </li>
         </ul>
       </nav>
