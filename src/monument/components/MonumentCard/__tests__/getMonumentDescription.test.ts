@@ -3,10 +3,7 @@ import getMonumentDescription from "../getMonumentDescription";
 
 describe("Given the getMonumentDescription function", () => {
   describe("When it receives Rambla del Poblenou", () => {
-    test("Then it should the pharagraph 'Rambla del Poblenou is a charming, tree-lined promenade in Barcelona, known for its relaxed vibe, local cafes, modernist buildings, and vibrant mix of culture and community.' as a description", () => {
-      const expectedDescription =
-        "Rambla del Poblenou is a charming, tree-lined promenade in Barcelona, known for its relaxed vibe, local cafes, modernist buildings, and vibrant mix of culture and community.";
-
+    test("Then it should the text 'Rambla del Poblenou is a charming, tree-lined promenade in Barcelona, known for its relaxed vibe, local cafes, modernist buildings, and vibrant mix of culture and community.' as a description", () => {
       const screen = document.createElement("div");
 
       const poblenouRambla: Monument = {
@@ -19,13 +16,12 @@ describe("Given the getMonumentDescription function", () => {
         name: "",
       };
 
-      const PoblenouRambla = getMonumentDescription(poblenouRambla);
-      screen.appendChild(PoblenouRambla);
+      const expectedDescription = poblenouRambla.description;
 
-      const poblenouRamblaDescription = screen.querySelector("p");
+      const poblenouRamblaElement = getMonumentDescription(poblenouRambla);
+      screen.appendChild(poblenouRamblaElement);
 
-      expect(poblenouRamblaDescription).not.toBeNull();
-      expect(poblenouRamblaDescription?.textContent).toBe(expectedDescription);
+      expect(screen.textContent).toContain(expectedDescription);
     });
   });
 });

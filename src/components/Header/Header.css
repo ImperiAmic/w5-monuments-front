@@ -19,7 +19,12 @@
 .header-navigation {
   padding-top: 24px;
   display: flex;
+  flex-direction: column;
   gap: 24px;
+
+  @media (width > 550px) {
+    flex-direction: row;
+  }
 }
 
 .header-navigation__link,
