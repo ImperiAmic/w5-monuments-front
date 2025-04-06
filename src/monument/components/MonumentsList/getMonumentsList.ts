@@ -3,6 +3,9 @@ import getMonumentCard from "../MonumentCard/getMonumentCard";
 import "./MonumentsList.css";
 
 const getMonumentsList = (monuments: Monument[]): HTMLElement => {
+  const monumentsContainer = document.createElement("div");
+  monumentsContainer.className = "monuments-container";
+
   const monumentsList = document.createElement("ul");
   monumentsList.className = "monuments";
 
@@ -17,7 +20,9 @@ const getMonumentsList = (monuments: Monument[]): HTMLElement => {
     monumentsList.appendChild(monumentWrapper);
   });
 
-  return monumentsList;
+  monumentsContainer.appendChild(monumentsList);
+
+  return monumentsContainer;
 };
 
 export default getMonumentsList;

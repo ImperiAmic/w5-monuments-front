@@ -3,7 +3,7 @@ import getMonumentsList from "./getMonumentsList";
 
 describe("Given the getMonumentsList function", () => {
   describe("When it receives Vilafranca del Penedès' Santa Maria Basilic, Vinseum and Ajuntament monuments", () => {
-    test("Then it should show 'Basílica de Santa Maria', 'VINSEUM: Museu de les Cultures del Vi de Catalunya' and  'Ajuntament de Vilafranca' inside a heading", () => {
+    test("Then it should show 'Capella Sant Joan', 'VINSEUM: Museu de les Cultures del Vi de Catalunya' and  'Ajuntament de Vilafranca' inside a heading", () => {
       const vilafrancaMonuments: Monument[] = [
         {
           city: "",
@@ -11,7 +11,7 @@ describe("Given the getMonumentsList function", () => {
           description: "",
           id: "",
           imageUrl: "",
-          name: "Basílica de Santa María",
+          name: "Capella Sant Joan",
         },
         {
           city: "",

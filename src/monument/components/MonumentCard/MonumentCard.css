@@ -23,7 +23,7 @@
 .monument-image {
   border-radius: 12px;
   max-height: 300px;
-  max-width: 500px;
+  max-width: 100%;
 }
 
 .monument-description {
