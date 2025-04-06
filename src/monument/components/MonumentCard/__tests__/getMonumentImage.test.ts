@@ -4,7 +4,7 @@ import getMonumentImage from "../getMonumentImage";
 describe("Given the getImageFunction", () => {
   describe("When it receives Sagrada Família", () => {
     test("Then it should show an image with 'La Sagrada Família és una puta passada' as an alt description", () => {
-      const expectedDescription = "General view of Sagrada Família";
+      const expectedImageDescription = "General view of Sagrada Família";
 
       const screen = document.createElement("div");
 
@@ -23,7 +23,7 @@ describe("Given the getImageFunction", () => {
       const sagradaFamiliaImage = screen.querySelector("img");
 
       expect(sagradaFamiliaImage).not.toBeNull();
-      expect(sagradaFamiliaImage?.alt).toBe(expectedDescription);
+      expect(sagradaFamiliaImage?.alt).toBe(expectedImageDescription);
     });
   });
 });
