@@ -2,6 +2,7 @@ import "./Form.css";
 
 const getForm = (): HTMLElement => {
   const formElement = document.createElement("form");
+  formElement.className = "form-wrapper";
 
   formElement.innerHTML = `
   <fieldset class='form-container'>
