@@ -1,0 +1,12 @@
+.form-wrapper {
+  padding: 20px;
+}
+
+.form-container {
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+}
