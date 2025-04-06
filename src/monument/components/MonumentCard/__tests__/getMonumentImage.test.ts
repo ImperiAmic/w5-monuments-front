@@ -4,8 +4,6 @@ import getMonumentImage from "../getMonumentImage";
 describe("Given the getImageFunction", () => {
   describe("When it receives Sagrada Família", () => {
     test("Then it should show an image with 'La Sagrada Família és una puta passada' as an alt description", () => {
-      const expectedImageDescription = "General view of Sagrada Família";
-
       const screen = document.createElement("div");
 
       const sagradaFamilia: Monument = {
@@ -16,6 +14,8 @@ describe("Given the getImageFunction", () => {
         imageUrl: "",
         name: "Sagrada Família",
       };
+
+      const expectedImageDescription = `General view of ${sagradaFamilia.name}`;
 
       const SagradaFamilia = getMonumentImage(sagradaFamilia);
       screen.appendChild(SagradaFamilia);

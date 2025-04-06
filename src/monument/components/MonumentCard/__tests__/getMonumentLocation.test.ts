@@ -2,34 +2,38 @@ import { Monument } from "../../../types";
 import getMonumentLocation from "../getMonumentLocation";
 
 describe("Given the getLocationMonument function", () => {
-  describe("Whn it receives the Milano's Duomo monument", () => {
-    test("Then it should show 'Italy' as a country and 'Milano' as a city", () => {
-      const screen = document.createElement("div");
+  describe("When it receives the Milano's Duomo monument", () => {
+    const screen = document.createElement("div");
 
-      const expectedLoctionItems = ["Country: Italy", "City: Milano"];
+    beforeEach(() => {
+      screen.innerHTML = "";
+    });
 
-      const duomo: Monument = {
-        city: "Milano",
-        country: "Italy",
-        description: "",
-        id: "",
-        imageUrl: "",
-        name: "",
-      };
+    const duomo: Monument = {
+      city: "Milano",
+      country: "Italy",
+      description: "",
+      id: "",
+      imageUrl: "",
+      name: "",
+    };
 
-      const Duomo = getMonumentLocation(duomo);
-      screen.appendChild(Duomo);
+    test("Then it should show 'Italy' as a country", () => {
+      const expectedLocationCountry = `Country: ${duomo.country}`;
 
-      const locationMonument = screen.querySelector("div");
-      const locationMonumentDetails = screen.querySelectorAll("span");
+      const duomoLocation = getMonumentLocation(duomo);
+      screen.appendChild(duomoLocation);
 
-      expect(locationMonument).not.toBeNull();
+      expect(duomoLocation.textContent).toContain(expectedLocationCountry);
+    });
 
-      locationMonumentDetails.forEach((locationMonumentDetail, position) => {
-        expect(locationMonumentDetail.textContent).toBe(
-          expectedLoctionItems[position],
-        );
-      });
+    test("Then it should show 'Milano' as a city", () => {
+      const expectedLocationCity = `City: ${duomo.city}`;
+
+      const duomoLocation = getMonumentLocation(duomo);
+      screen.appendChild(duomoLocation);
+
+      expect(duomoLocation?.textContent).toContain(expectedLocationCity);
     });
   });
 });
